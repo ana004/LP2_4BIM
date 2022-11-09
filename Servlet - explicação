@@ -1,0 +1,43 @@
+3. 
+
+Ciclo de vida
+
+Primeiro, o Servlet é criado, em um espaço em memória e é instanciado com o método init(), em seguida, tem seu processamento feito com o método service, 
+que avalia qual o tipo de requisição foi feito, get ou post, e então, o Servlet é encerrado com o método destroy.
+
+init() - chamado apenas uma vez, somente quando o Servlet é criado. Assim, é criada apenas uma instância que será usada por cada requisição do usuário.
+
+service() - lida com solicitações do cliente (navegador) e dá uma resposta. Avalia o tipo de solicitação HTTP (se foi get ou post por exemplo), e chama os métodos doPost,
+ou doGet, para processar os dados.
+
+destroy() - chamado uma só vez, no final da vida do Servlet, fecha conexões com bancos, interrompe threads, executa atividades de limpeza, etc.
+
+
+Assinaturas:
+
+public void init(ServletConfig config) throws ServletException
+
+public void service(ServletRequest request, ServletResponse response)
+throws ServletException, IOException
+
+@Override
+	public void destroy() {
+		
+	}
+  
+  
+  
+4.
+
+doGet: recupera e processa requisições feitas pelo cliente, do tipo get
+
+protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+}
+
+
+dotPost: recupera e processa requisições feitas pelo cliente, do tipo get. Sempre usado para quando as informações precisam de mais segurança
+
+protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+}
