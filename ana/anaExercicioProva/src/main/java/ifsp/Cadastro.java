@@ -37,8 +37,8 @@ public class Cadastro extends HttpServlet {
 		if (nome.isEmpty() || endereco.isEmpty() || bairro.isEmpty() || cidade.isEmpty() || cep.isEmpty() || telefone.isEmpty()) {
 			response.sendRedirect(request.getContextPath() + "/index.jsp");
 		} else {
-			PrintWriter teste = response.getWriter();
-			teste.print("Cadastro realizado com sucesso !");
+			PrintWriter mensagem = response.getWriter();
+			mensagem.print("Cadastro realizado com sucesso !");
 		}
 		
 	}
