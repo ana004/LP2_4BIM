@@ -36,7 +36,7 @@ protected void doGet(HttpServletRequest request, HttpServletResponse response) t
 }
 
 
-dotPost: recupera e processa requisições feitas pelo cliente, do tipo get. Sempre usado para quando as informações precisam de mais segurança
+dotPost: recupera e processa requisições feitas pelo cliente, do tipo post. Sempre usado para quando as informações precisam de mais segurança
 
 protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
